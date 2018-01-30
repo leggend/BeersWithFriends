@@ -4,5 +4,6 @@ export class EventModel{
     public date: Date = new Date();
     public title: string = "";
     public total: number = 0;
+    public picture: string = "";
     public friends: EventFriendModel[] = [];
 }

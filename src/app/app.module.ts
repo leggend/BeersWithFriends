@@ -6,7 +6,7 @@ import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage, ListPage, AboutPage, EventsPage, SettingsPage, EventInfoPage } from '../pages';
@@ -45,7 +45,7 @@ export function createTranslateLoader(http: Http) {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler },
-    EventsService
+    EventsService, Camera
   ]
 })
 export class AppModule {}

@@ -8,6 +8,13 @@
 </ion-header>
         
 <ion-content padding>
+    
+    <ion-fab left bottom>
+        <button ion-fab color="primary" (click)="takePicture()">
+            <i class="fa fa-camera"></i>
+            </button>
+    </ion-fab>
+
     <ion-card>
         <ion-card-header class="friend-card-header">
             <ion-grid style="padding: 0px;">
@@ -23,8 +30,10 @@
                 </ion-row>
             </ion-grid>
         </ion-card-header>
-        <ion-card-content class="friend-card-content">
-
+        <ion-card-content class="friend-card-content text-center" style="font-size: 128px; text-align: center;" style="padding: 0px;">
+            <i class="fa fa-picture-o" *ngIf="!data.picture || data.picture===''"></i>
+            <img text-center src="{{data.picture}}" style="width: 100%; " class="container-shadow" *ngIf="data.picture && data.picture!=''"/>
+            <div id="map"></div>
         </ion-card-content>      
     </ion-card>    
 </ion-content>
