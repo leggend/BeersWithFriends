@@ -1,0 +1,27 @@
+page-events {
+
+}
+.friend-card-header{
+    background-color: color($colors, color-primary-4);
+    color: color($colors, color-primary-1);
+}
+.friend-card-content{
+    background-color: color($colors, color-primary-1);
+    color: color($colors, color-primary-4);
+}
+.event-info-card{
+    background-color: color($colors, color-primary-2);
+    color: color($colors, color-primary-4);
+}
+
+.padding-correction-title { padding-left: 9px; }
+.no-friends-label {
+    margin-top: 30px; 
+    padding-left: 9px;
+}
+.total-drinks{ padding-left: 15px; }
+.friend-drink{ padding-right: 4px; }
+.font-color-light { color: color($colors, color-primary-1); }
+.font-color-dark { color: color($colors, color-primary-4); }
+.delete-drink{ color: color($colors, danger);  }
+.item-md-light{ background-color: color($colors, color-primary-2); }

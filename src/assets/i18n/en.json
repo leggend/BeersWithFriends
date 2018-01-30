@@ -1,0 +1,50 @@
+{
+  "MAIN_MENU_HOME": "Home",
+  "MainMenu":{
+    "Title":"Menu",
+    "HOME":" Home",
+    "EVENT":" Event",
+    "SETTINGS": " Settings",
+    "ABOUT":" About"
+  },
+  "HOME_PAGE":{
+    "TITLE": "Home",
+    "LAST_EVENTS": "Last Events",
+    "TITLE_CONFIRM":"Confirm delete",
+    "MESS_CONFIRM_DELETE_EVENT":"¿Do you want to remove that Event?",
+    "CANCEL":"Cancel",
+    "DELETE":"Delete"
+
+  },
+  "PAGE_ABOUT":{
+    "TITLE": "Information",
+    "DEVELOPED_BY": "Developed by: ",
+    "VERSION":"Version"
+  },
+  "EVENT_PAGE":{
+    "TITLE": "Event",
+    "SUB_TITLE": "Beers consumed",
+    "NO_FRIENDS": "No friends on the event. Add someone.",
+    "NEW_FRIEND": "New Friend",
+    "NEW_DRINK": "New drink",
+    "BTN_ADD_DRINK": "New Drink",
+    "MESS_NO_DRINKS": "He's dry. Doesn't drink anithing.",
+    "TITLE_CONFIRM": "Confirm delete",
+    "MESS_CONFIRM_DELETE_DRINK": "¿Do you want to remove that drink?",
+    "MESS_CONFIRM_DELETE_FRIEND":"¿Do you want to remove that friend?",
+    "MESS_CONFIRM_DELETE_ALL": "¿Do you really want to delete all data?",
+    "CANCEL": "Cancel",
+    "DELETE": "Remove",
+    "DEFAULT_TITLE":"Current Event",
+    "ME":"Me"
+  },
+  "PAGE_SETTINGS":{
+    "TITLE": "Settings",
+    "APP_SETTINGS": "Application Settings",
+    "LANGUAGE":"Language",
+    "GLOBAL_SETTINGS":"Global Settings"
+  },
+  "PAGE_EVENT_INFO":{
+    "TITLE": "Event Information"
+  }
+}

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><i class="fa fa-info-circle"></i> {{'PAGE_EVENT_INFO.TITLE' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+        
+<ion-content padding>
+    <ion-card>
+        <ion-card-header class="friend-card-header">
+            <ion-grid style="padding: 0px;">
+                <ion-row align-items-center>
+                    <ion-col col-12>
+                    <ion-input (ionBlur)='dataHasChanged($event)' [(ngModel)]="data.title"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row align-items-center>
+                    <ion-col col-12>
+                        <ion-datetime (ionBlur)='dataHasChanged($event)' displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="data.date"></ion-datetime>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+        <ion-card-content class="friend-card-content">
+
+        </ion-card-content>      
+    </ion-card>    
+</ion-content>
+            

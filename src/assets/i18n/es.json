@@ -1,0 +1,50 @@
+{
+  "MAIN_MENU_HOME": "Inicio",
+  "MainMenu":{
+    "Title":"Menu",
+    "HOME":" Inicio",
+    "EVENT":" Evento",
+    "SETTINGS": " Ajuste",
+    "ABOUT":" Información"
+  },
+  "HOME_PAGE":{
+    "TITLE": "Inicio",
+    "LAST_EVENTS": "Últimos Eventos",
+    "TITLE_CONFIRM":"Confirmar borrado",
+    "MESS_CONFIRM_DELETE_EVENT":"¿Seguro que desea eliminar el evento?",
+    "CANCEL":"Cancelar",
+    "DELETE":"Eliminar"
+  },
+  "PAGE_ABOUT":{
+    "TITLE": "Información",
+    "DEVELOPED_BY": "Desarrollado por: ",
+    "VERSION":"Versión"
+  },
+  "EVENT_PAGE":{
+    "TITLE": "Evento",
+    "SUB_TITLE": "Cervezas consumidas",
+    "NO_FRIENDS": "No hay amigos en el evento. Agrege alguno.",
+    "NEW_FRIEND": "Nuevo amigo",
+    "NEW_DRINK": "Nueva bebida",
+    "BTN_ADD_DRINK": "Nueva bebida",
+    "MESS_NO_DRINKS": "Esta seco. No ha bebido nada.",
+    "TITLE_CONFIRM": "Confirmar borrado",
+    "MESS_CONFIRM_DELETE_DRINK": "¿Desea eliminar esta bebida?",
+    "MESS_CONFIRM_DELETE_FRIEND":"¿Desea eliminar a este amigo?",
+    "MESS_CONFIRM_DELETE_ALL": "¿Realmente dese eliminar toda la información?",
+    "CANCEL": "Cancelar",
+    "DELETE": "Eliminar",
+    "DEFAULT_TITLE":"Evento actual",
+    "ME":"Yo"
+  },
+  "PAGE_SETTINGS":{
+    "TITLE": "Ajustes",
+    "APP_SETTINGS": "Ajustes de la Aplicación",
+    "LANGUAGE":"Idioma",
+    "GLOBAL_SETTINGS":"Ajustes Generales"
+
+  },
+  "PAGE_EVENT_INFO":{
+    "TITLE": "Información del Evento"
+  }
+}

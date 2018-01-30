@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><i class="fa fa-cogs"></i> {{'PAGE_SETTINGS.TITLE' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+        
+<ion-content padding>
+
+    <ion-item-group>
+        <ion-item-divider color="header-bg">
+            <div item-left  style="font-size: 1.3em; font-weight: bold;">{{"PAGE_SETTINGS.APP_SETTINGS" | translate}}</div>
+        </ion-item-divider>
+    </ion-item-group>  
+            
+    <ion-grid style="padding: 10px;">
+        <ion-row align-items-center>
+            <ion-col col-12 item-left style="text-align: left;">
+                <ion-label style="font-size: 1.4em">{{"PAGE_SETTINGS.GLOBAL_SETTINGS" | translate}}</ion-label>
+            </ion-col>
+        </ion-row>
+            
+        <ion-row align-items-center>
+            <ion-col col-1></ion-col>
+            <ion-col col-7 item-left style="text-align: left;">
+            <ion-label>{{"PAGE_SETTINGS.LANGUAGE" | translate}}</ion-label>
+            </ion-col>
+            <ion-col col-4  text-right>
+            <ion-select text-right [(ngModel)]="currentLang" class="form-control" style="min-width: 100%;" (ionChange)="languageChange($event)">
+                <ion-option text-right *ngFor="let lang of _langs" value="{{lang.value}}" >{{lang.text}}</ion-option>
+            </ion-select>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+            

@@ -1,5 +1,8 @@
 {
   "name": "BeersWithFriends",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "786374ed",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

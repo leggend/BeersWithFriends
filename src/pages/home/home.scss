@@ -1,3 +1,20 @@
 page-home {
 
 }
+.friend-name{
+    font-size: 1.2em;
+    width: 90%;
+    border: 0px none;
+    border-bottom: 1px solid lightgray;
+}
+.friend-beers{
+    font-size: 1.2em;
+}
+
+.text-input-md{
+    margin: 8px 8px;
+    border-bottom: 1px solid lightgray;
+}
+
+.delete-color{ color: color($colors, danger);  }
+

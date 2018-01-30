@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@font-face{
+    font-family: Quicksand;
+    src: url('../assets/fonts/Quicksand.woff2') format('woff2');
+}
+*{
+    font-family: Quicksand;
+}
+
+
+.content-md{ background-color: color($colors, color-primary-0); }
+.item-md{ background-color: color($colors, color-primary-0)}
+.toolbar-title-md{ color: color($colors, color-primary-1); }
+.bar-button-default-md{ color: color($colors, color-primary-1); }
+.toolbar-background-md{ background-color: color($colors, color-primary-4); }
+.label-md{ color: color($colors, color-primary-1); }
+.scroll-content{ color: color($colors, color-primary-1); }
+
+.select-icon-inner { color: color($colors, color-primary-1); }

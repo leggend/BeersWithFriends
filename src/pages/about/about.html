@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><i class="fa fa-user-circle"></i> {{'PAGE_ABOUT.TITLE' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+      
+<ion-content padding>
+<ion-grid style="padding: 10px;">
+    <ion-row align-items-center>
+    <ion-col col-12 item-left style=" text-align: center;">
+        <img text-center src="assets/img/AboutMe.png" class="developer-image"/>
+    </ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+    <ion-col col-12 item-left style="text-align: center;">
+        <ion-label>{{'PAGE_ABOUT.DEVELOPED_BY' | translate}}</ion-label>
+    </ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+    <ion-col col-12 item-left style="text-align: center;">
+        <ion-label><h2>Jordi Las Cordero</h2></ion-label>
+    </ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+    <ion-col col-12 item-left style="text-align: center; color: #1da1f2;">
+        <ion-label><h4><i class="fa fa-twitter"></i> @JordiDotNet</h4></ion-label>
+    </ion-col>
+    </ion-row>
+
+    <ion-row align-items-center>
+        <ion-col col-12 item-left style="text-align: center;">
+            <br/>
+            <h4>{{ 'PAGE_ABOUT.VERSION' | translate }}: {{version}}</h4>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+
+</ion-content>
+      

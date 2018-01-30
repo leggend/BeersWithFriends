@@ -1,0 +1,49 @@
+{
+    "MAIN_MENU_HOME": "Inici",
+    "MainMenu":{
+      "Title":"Menu",
+      "HOME":" Inici",
+      "EVENT":" Esdeveniment",
+      "SETTINGS": " Ajustaments",
+      "ABOUT":" Informació"
+    },
+    "HOME_PAGE":{
+      "TITLE": "Inici",
+      "LAST_EVENTS": "Últims Esdeveniments",
+      "TITLE_CONFIRM":"Confirmar esborrat",
+      "MESS_CONFIRM_DELETE_EVENT":"¿Deseasitja esborrar aquesta  esdeveniment?",
+      "CANCEL":"Cancelar",
+      "DELETE":"Esborrar"
+    },
+    "PAGE_ABOUT":{
+      "TITLE": "Informació",
+      "DEVELOPED_BY": "Desenvolupat per: ",
+      "VERSION":"Versió"
+    },
+    "EVENT_PAGE":{
+      "TITLE": "Esdeveniment",
+      "SUB_TITLE": "Cerveces consumides",
+      "NO_FRIENDS": "No hi ha amics en l'esdeveniment. Afegeixi un.",
+      "NEW_FRIEND": "Nou amic",
+      "NEW_DRINK": "Nova beguda",
+      "BTN_ADD_DRINK": "Nova beguda",
+      "MESS_NO_DRINKS": "Esta sec. No ha begut res.",
+      "TITLE_CONFIRM": "Confirmar esborrat",
+      "MESS_CONFIRM_DELETE_DRINK": "¿Deseasitja esborrar aquesta beguda?",
+      "MESS_CONFIRM_DELETE_FRIEND":"Desitja esborrar aquest amic?",
+      "MESS_CONFIRM_DELETE_ALL": "¿Realment desitja esboorar tota la informació?",
+      "CANCEL": "Cancelar",
+      "DELETE": "Esborrar",
+      "DEFAULT_TITLE":"Esdeveniment Actual",
+      "ME":"Jo"
+    },
+    "PAGE_SETTINGS":{
+      "TITLE": "Ajustaments",
+      "APP_SETTINGS": "Ajustaments de l'Aplicació",
+      "LANGUAGE":"Idioma",
+      "GLOBAL_SETTINGS":"Ajustaments Generales"
+    },
+    "PAGE_EVENT_INFO":{
+      "TITLE": "Informació de l'Esdeveniment"
+    }
+  }

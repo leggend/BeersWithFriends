@@ -3,16 +3,50 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title><i class="fa fa-home"></i> {{'HOME_PAGE.TITLE' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-fab right bottom>
+      <button ion-fab color="secondary" (click)="newEvent()" [attr.disabled]="events.length>=10 ? '' : null">
+        <i class="fa fa-plus"></i>
+      </button>
+  </ion-fab>
+  <div text-center>
+    <img src="assets/img/BeersFriends.png" style="align-items: center; padding-left: 10px; padding-right: 10px;" />
+  </div>
+    
+  <H2 style="padding-left: 5px;">{{'HOME_PAGE.LAST_EVENTS' | translate }}</H2>
+  <ion-card *ngFor="let event of events; let idxFriend = index">
+    <ion-card-content class="friend-card-content">
+      <table style="width:100%;">
+        <tr>
+          <td style="padding-right: 10px;" align-items-top>
+            <i class="fa fa-times delete-color"  (click)="deleteEvent(event)"></i>
+          </td>
+          <td style="width: 40%;">
+            <h5>{{event.title}}</h5>
+            <h5>{{event.date | date: 'dd/MM/yyyy'}}</h5>
+          </td>
+          <td style="width: 60%;" align="right">
+            <table style="width: 100%;">
+              <tr>
+                <td style="font-size: 20px;padding-left: 20px;">
+                    <i class="fa fa-user"></i>: {{event.friends.length}}
+                </td>
+                <td style="font-size: 20px; padding-left: 20px;">
+                  <i class="fa fa-beer"></i>: {{event.total}}
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td style="padding-left: 10px;">
+            <i class="fa fa-pencil" (click)="editEvent(event)"></i>
+          </td>
+        </tr>
+      </table>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

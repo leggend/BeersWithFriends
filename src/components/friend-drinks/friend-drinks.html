@@ -1,0 +1,27 @@
+<!-- Generated template for the FriendDrinksComponent component -->
+<div>
+  {{text}}
+</div>
+<ion-card>
+  <ion-card-header>
+    <ion-grid style="padding: 0px;">
+      <ion-row align-items-left>
+        <ion-col col-8>
+          <input type="text" class="friend-name form-control" [(value)]="friend.name"/>
+        </ion-col>
+        <ion-col col-2>
+            <span class="friend-beers">
+              <ion-icon name="beer"></ion-icon>: {{friend.beers}}
+            </span>
+        </ion-col>
+        <ion-col col-2 align-items-right>
+          <button ion-button (click)="newDrink(friend)">+ <ion-icon name="beer"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card-header>
+  <ion-card-content>
+    <!-- Add card content here! -->
+  </ion-card-content>      
+</ion-card>

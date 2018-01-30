@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <table style="width:100%;">
+      <tr>
+        <td>
+            <ion-title>
+                <i class="fa fa-calendar"></i> {{data.title}}
+            </ion-title>
+        </td>
+        <td class="font-color-light">
+          <i item-end class="fa fa-info-circle" style="font-size: 1.8em;" (click)="navigateInfoPage()"></i>
+        </td>
+      </tr>
+    </table>
+      
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-fab right bottom>
+      <button ion-fab color="secondary" (click)="newFriend()" [attr.disabled]="data.friends.length>=10 ? '' : null">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+  </ion-fab>
+
+  <ion-fab left bottom>
+      <button ion-fab color="danger" (click)="deleteAll()" [attr.disabled]="data.friends.length==0 ? '' : null">
+          <i class="fa fa-trash"></i>
+        </button>
+  </ion-fab>
+
+  <h6 class="padding-correction-title">{{data.date | date: 'dd/MM/yyyy'}} </h6>
+  <h3 class="padding-correction-title">{{'EVENT_PAGE.SUB_TITLE' | translate}} <i class="fa fa-beer total-drinks"></i>: {{data.total}} </h3>
+  <h5 *ngIf="data.friends.length==0" class="no-friends-label">{{'EVENT_PAGE.NO_FRIENDS' | translate }}</h5>
+<!--
+  <ion-label *ngIf="data.friends.length==0" style="margin-top: 30px; padding-left: 9px;">{{'EVENT_PAGE.NO_FRIENDS' | translate }}</ion-label>
+-->
+  <ion-card *ngFor="let friend of data.friends; let idxFriend = index">
+    <ion-card-header class="friend-card-header">
+      <ion-grid style="padding: 0px;">
+        <ion-row align-items-center>
+          <ion-col col-1>
+            <ion-icon color="danger" name="close-circle" (click)="deleteFriend(idxFriend, friend.beers)"></ion-icon>
+          </ion-col>
+          <ion-col col-7>
+            <ion-input (ionBlur)='dataHasChanged($event)' [(ngModel)]="friend.name"></ion-input>
+          </ion-col>
+          <ion-col col-2>
+              <span class="friend-beers">
+                <i class="fa fa-beer friend-drink"></i>: {{friend.beers}}
+              </span>
+          </ion-col>
+          <ion-col col-2  style="text-align: right;">
+              <i class="fa fa-chevron-up" *ngIf="friend.show" (click)="changeFriendShow(friend)"></i>
+              <i class="fa fa-chevron-down" *ngIf="!friend.show" (click)="changeFriendShow(friend)"></i>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-header>
+    <ion-card-content class="friend-card-content" *ngIf="friend.show">
+      <ion-grid style="padding: 0px;">
+        <ion-row *ngFor="let drink of friend.drinks; let idxDrink = index" align-items-center>
+          <ion-col col-1>
+            <i class="fa fa-times delete-drink" (click)="deleteDrink(idxDrink, friend)"></i>
+          </ion-col>
+          <ion-col col-5>
+            <ion-input (ionBlur)='dataHasChanged($event)' [(ngModel)]="drink.name"></ion-input>
+          </ion-col>
+          <ion-col col-2>
+            {{drink.number}}
+          </ion-col>
+          <ion-col col-4 style="text-align: right;">
+            <button ion-button small color="danger" (click)="removeDrink(drink, friend)" [attr.disabled]="drink.number==0 ? '' : null" >-</button>
+            <button ion-button small color="secondary" (click)="addDrink(drink, friend)">+</button>
+          </ion-col>
+        </ion-row>
+        <ion-row align-items-center>
+          <ion-col col-12 style="text-align: center;" *ngIf="friend.drinks.length==0">
+              {{'EVENT_PAGE.MESS_NO_DRINKS' | translate }}
+          </ion-col>
+        </ion-row>
+        <ion-row align-items-center>
+          <ion-col col-12 style="text-align: center;">
+            <button ion-button (click)="newDrink(friend)" [attr.disabled]="friend.drinks.length>=10 ? '' : null"><i class="fa fa-plus-circle" style="padding-right: 4px;"></i> {{'EVENT_PAGE.BTN_ADD_DRINK' | translate }}</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>      
+  </ion-card>
+</ion-content>
+  
