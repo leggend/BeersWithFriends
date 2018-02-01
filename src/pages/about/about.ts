@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-about',
@@ -8,11 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AboutPage {
     constructor(public navCtrl: NavController, 
-        public navParams: NavParams, 
-        private translate: TranslateService) {
+        public navParams: NavParams) {
       }
     
-      private version: string = "1.0.0";
+      protected version: string = "1.0.0";
     
       ionViewDidLoad() {
       }

@@ -13,7 +13,6 @@ import { EventModel, EventFriendModel } from '../../models';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  private currentLang: string = "en";
   private translations: any = {};
   protected events: EventModel[] = [];
   constructor(

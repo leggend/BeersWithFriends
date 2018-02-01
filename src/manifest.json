@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "BeersWithFrineds",
+  "short_name": "BwF",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

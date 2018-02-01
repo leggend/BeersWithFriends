@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, IonicPage, AlertController, Events } from 'ionic-angular';
+import { NavController, NavParams, Events } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 
@@ -8,15 +8,13 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'settings.html'
 })
 export class SettingsPage {
-  private _langs: any[] = [ 
+  public _langs: any[] = [ 
     {text: 'Español', value: 'es'}, 
     {text: 'Catalá', value: 'ca'},
     {text: 'English', value: 'en'}, 
   ];
 
-  private currentLang: string = "en";
-  private translations: any = {};
-
+  public currentLang: string = "en";
 
   constructor(
         public navCtrl: NavController, 

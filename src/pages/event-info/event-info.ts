@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
-import { TranslateService } from '@ngx-translate/core';
-import { Storage } from '@ionic/storage';
 import { EventModel } from '../../models';
 import { EventsService } from '../../services';
 import { Camera, CameraOptions } from '@ionic-native/camera';
@@ -12,9 +10,6 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class EventInfoPage {
   protected pictureTeken: boolean = false;
-  private currentLang: string = "en";
-  private translations: any = {};
-  private hasChanged: boolean = false;
   
   private options: CameraOptions = {
     quality: 50, 
@@ -29,10 +24,8 @@ export class EventInfoPage {
   constructor(
         public navCtrl: NavController, 
         public navParams: NavParams, 
-        private storage: Storage,
         public events: Events,
-        public eventsSrv: EventsService,
-        private translate: TranslateService
+        public eventsSrv: EventsService
         , private camera: Camera
       ) 
   {
