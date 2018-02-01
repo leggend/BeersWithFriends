@@ -1,3 +1,9 @@
+.banner {
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+
 .friend-name{
     font-size: 1.2em;
     width: 90%;
@@ -13,5 +19,20 @@
     border-bottom: 1px solid lightgray;
 }
 
-.delete-color{ color: color($colors, danger);  }
+.delete-color{ 
+    color: color($colors, danger);  
+}
+.td-delete { 
+    padding-right: 10px; 
+}
+.td-title { 
+    width: 40%; 
+}
+.td-icons { 
+    width: 60%; 
+}
+.td-icon { 
+    font-size: 20px; 
+    padding-left: 20px; 
+}
 

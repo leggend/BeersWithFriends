@@ -17,7 +17,7 @@
 
     <ion-card>
         <ion-card-header class="friend-card-header">
-            <ion-grid style="padding: 0px;">
+            <ion-grid class="pd-0">
                 <ion-row align-items-center>
                     <ion-col col-12>
                     <ion-input (ionBlur)='dataHasChanged($event)' [(ngModel)]="data.title"></ion-input>
@@ -30,9 +30,9 @@
                 </ion-row>
             </ion-grid>
         </ion-card-header>
-        <ion-card-content class="friend-card-content text-center" style="font-size: 128px; text-align: center;" style="padding: 0px;">
+        <ion-card-content class="friend-card-content text-center card-picture">
             <i class="fa fa-picture-o" *ngIf="!data.picture || data.picture===''"></i>
-            <img text-center src="{{data.picture}}" style="width: 100%; " class="container-shadow" *ngIf="data.picture && data.picture!=''"/>
+            <img text-center src="{{data.picture}}" class="container-shadow icon-picture" *ngIf="data.picture && data.picture!=''"/>
             <div id="map"></div>
         </ion-card-content>      
     </ion-card>    

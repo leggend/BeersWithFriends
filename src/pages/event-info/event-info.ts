@@ -24,7 +24,7 @@ export class EventInfoPage {
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE
   }
-  //AIzaSyAlnHTwQv5itJhCPfaA1OXaP5LUussldQ8
+
   public data: EventModel = new EventModel();
   constructor(
         public navCtrl: NavController, 

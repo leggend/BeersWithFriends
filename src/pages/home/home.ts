@@ -25,7 +25,6 @@ export class HomePage {
   {
 
     this.storage.get('language').then((val) => {
-      //this.translate.setDefaultLang(this.currentLang);
       this.translate.get([
           'EVENT_PAGE.DEFAULT_TITLE',
           'EVENT_PAGE.ME',
@@ -56,7 +55,6 @@ export class HomePage {
       let friend = new EventFriendModel();
       friend.name = this.translations['EVENT_PAGE.ME'];
       newEvent.friends.push(friend);
-      //this.events.push(newEvent);
       this.eventsSrv.saveData(newEvent).then(res=>{
         this.navCtrl.push(EventsPage);
       })
@@ -77,14 +75,11 @@ export class HomePage {
         {
           text: this.translations['HOME_PAGE.CANCEL'],
           role: 'cancel',
-          handler: () => {
-            //console.log('Cancel clicked');
-          }
+          handler: () => { }
         },
         {
           text: this.translations['HOME_PAGE.DELETE'],
           handler: () => {
-            //Delete
             this.eventsSrv.deleteEvent(event).then(res=>{
               this.eventsSrv.getEventsAll().then(data=>{
                 this.events = data;

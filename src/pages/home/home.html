@@ -15,34 +15,34 @@
       </button>
   </ion-fab>
   <div text-center>
-    <img src="assets/img/BeersFriends.png" style="align-items: center; padding-left: 10px; padding-right: 10px;" />
+    <img class="banner" src="assets/img/BeersFriends.png" />
   </div>
     
-  <H2 style="padding-left: 5px;">{{'HOME_PAGE.LAST_EVENTS' | translate }}</H2>
+  <H2 class="pd-l-5">{{'HOME_PAGE.LAST_EVENTS' | translate }}</H2>
   <ion-card *ngFor="let event of events; let idxFriend = index">
     <ion-card-content class="friend-card-content">
       <table style="width:100%;">
         <tr>
-          <td style="padding-right: 10px;" align-items-top>
+          <td class="td-delete" align-items-top>
             <i class="fa fa-times delete-color"  (click)="deleteEvent(event)"></i>
           </td>
-          <td style="width: 40%;">
+          <td class="td-title">
             <h5>{{event.title}}</h5>
             <h5>{{event.date | date: 'dd/MM/yyyy'}}</h5>
           </td>
-          <td style="width: 60%;" align="right">
+          <td class="td-icons" align="right">
             <table style="width: 100%;">
               <tr>
-                <td style="font-size: 20px;padding-left: 20px;">
-                    <i class="fa fa-user"></i>: {{event.friends.length}}
+                <td class="td-icon">
+                  <i class="fa fa-user"></i>: {{event.friends.length}}
                 </td>
-                <td style="font-size: 20px; padding-left: 20px;">
+                <td class="td-icon">
                   <i class="fa fa-beer"></i>: {{event.total}}
                 </td>
               </tr>
             </table>
           </td>
-          <td style="padding-left: 10px;">
+          <td class="pd-l-10">
             <i class="fa fa-pencil" (click)="editEvent(event)"></i>
           </td>
         </tr>

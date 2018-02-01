@@ -56,8 +56,11 @@
               </span>
           </ion-col>
           <ion-col col-2  style="text-align: right;">
+              <i class="fa fa-chevron-up" (click)="changeFriendShow(friend)" [ngClass]="{'show': friend.show}"></i>
+            <!--
               <i class="fa fa-chevron-up" *ngIf="friend.show" (click)="changeFriendShow(friend)"></i>
               <i class="fa fa-chevron-down" *ngIf="!friend.show" (click)="changeFriendShow(friend)"></i>
+            -->
           </ion-col>
         </ion-row>
       </ion-grid>

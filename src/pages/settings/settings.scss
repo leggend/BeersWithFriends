@@ -1,7 +1,24 @@
-//item item-divider item-md item-divider-md item-md-header-bg item-divider-md-header-bg
-.item-divider-md{ color: color($colors, color-primary-1); }
-//.select-md { color: color($colors, color-primary-2); }
-//.select-icon{ color: color($colors, color-primary-2); }
-//.select-icon-inner{ color: color($colors, color-primary-2); }
-.select-md .select-icon .select-icon-inner{color: color($colors, color-primary-4); }
+.item-divider-md{ 
+    color: color($colors, color-primary-1); 
+}
 
+.select-md .select-icon .select-icon-inner{
+    color: color($colors, color-primary-4); 
+}
+
+.lb-settings { 
+    font-size: 1.3em; font-weight: bold; 
+}
+
+.lb-global {
+    text-align: left;
+    font-size: 1.4em;
+}
+
+.left{
+    text-align: left;
+}
+
+.form-select {
+    min-width: 100%;
+}

@@ -9,7 +9,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
-import { HomePage, ListPage, AboutPage, EventsPage, SettingsPage, EventInfoPage } from '../pages';
+import { HomePage, AboutPage, EventsPage, SettingsPage, EventInfoPage } from '../pages';
 import { EventsService } from '../services';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,7 +22,7 @@ export function createTranslateLoader(http: Http) {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage, AboutPage, ListPage, EventsPage, SettingsPage, EventInfoPage
+    HomePage, AboutPage, EventsPage, SettingsPage, EventInfoPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +39,7 @@ export function createTranslateLoader(http: Http) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp, HomePage, AboutPage, ListPage, EventsPage, SettingsPage, EventInfoPage
+    MyApp, HomePage, AboutPage, EventsPage, SettingsPage, EventInfoPage
   ],
   providers: [
     StatusBar,

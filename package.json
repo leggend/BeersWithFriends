@@ -1,8 +1,8 @@
 {
     "name": "BeersWithFriends",
-    "version": "0.0.1",
-    "author": "Ionic Framework",
-    "homepage": "http://ionicframework.com/",
+    "version": "1.0.0",
+    "author": "Jordi Las Cordero",
+    "homepage": "https://github.com/leggend",
     "private": true,
     "scripts": {
         "clean": "ionic-app-scripts clean",
@@ -52,7 +52,7 @@
         "@ionic/app-scripts": "2.1.3",
         "typescript": "2.3.4"
     },
-    "description": "An Ionic project",
+    "description": "An application to count the amount of drinks that each of our friends has taken.",
     "config": {
         "ionic_copy": "./scripts/copy-custom-libs.js"
     },
