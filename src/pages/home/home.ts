@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { File } from '@ionic-native/file';
 
 import { EventsPage } from '../';
 import { EventsService } from '../../services';
@@ -18,6 +19,7 @@ export class HomePage {
   constructor(
     public navCtrl: NavController, 
     private storage: Storage,
+    private file: File,
     private translate: TranslateService, 
     private alertCtrl: AlertController,
     private eventsSrv: EventsService) 
@@ -79,6 +81,7 @@ export class HomePage {
         {
           text: this.translations['HOME_PAGE.DELETE'],
           handler: () => {
+            this.deleteImageFile(event);
             this.eventsSrv.deleteEvent(event).then(res=>{
               this.eventsSrv.getEventsAll().then(data=>{
                 this.events = data;
@@ -90,4 +93,33 @@ export class HomePage {
     });
     alert.present();
   }
+  
+  deleteImageFile(event: EventModel){
+    if(event.picture && event.picture.length>0){
+      let path = "";
+      let initPos = 0;
+      let pos = 0;
+      while(pos>=0){
+          pos = event.picture.indexOf("/", initPos);
+          if(pos>=0){
+              initPos = pos+1;
+          }
+      }
+      path = event.picture.slice(0,initPos);
+      let file = event.picture.slice(initPos);
+      
+      this.file.checkFile(path, file).then((exist)=>{
+          if(exist){
+              this.file.removeFile(path, file).then((res)=>{
+                this.eventsSrv.saveData(event);
+              }).catch((err)=>{ 
+                
+              });
+          }
+      }).catch((err)=>{
+        
+      });
+    }
+  }
+  
 }

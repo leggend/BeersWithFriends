@@ -183,7 +183,11 @@ export class EventsPage {
   }
   
   navigateInfoPage(){
-    this.navCtrl.push(EventInfoPage);
+    try{
+      this.navCtrl.push(EventInfoPage);
+    }catch(e){
+      alert(JSON.stringify(e));
+    }
   }
 
 
